@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[const mapStateToProps = state => ({${1}});]]></content>
+
+  <scope>source.js</scope>
+  <tabTrigger>mapState</tabTrigger>
+  <description>Creates a mapStateToProps const</description>
+</snippet>
