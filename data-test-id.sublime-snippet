@@ -1,6 +1,0 @@
-<snippet>
-  <content><![CDATA[data-test-id="${1:this}"]]></content>
-<tabTrigger>testid</tabTrigger>
-<scope>source.js</scope>
-<description>Test id data attr</description>
-</snippet>

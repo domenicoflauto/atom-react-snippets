@@ -1,0 +1,63 @@
+'.source.js.jsx':
+  'Creates a react class component':
+    'prefix': 'classcomponent'
+    'body': """
+    import React from 'react'
+
+    export class ${1:Component} extends React.Component {
+
+      render() {
+        return (
+          ${2://...stuff}
+        );
+      }
+    }
+    """
+
+  'Connect component to Redux':
+    'prefix': 'connect'
+    'body': """
+    export default connect(
+      mapStateToProps,
+      mapDispatchToProps
+    )(${1:Component});
+    """
+
+  'Test id data attr':
+    'prefix': 'testid'
+    'body': """
+    data-test-id="${1:this}"
+    """
+
+  'Jest test case with Enzyme mounted component':
+    'prefix': 'should'
+    'body': """
+    it ('should ${1:do the stuff}', () => {
+      wrapper = mount(
+        <${2:Component} {...props}/>
+      );
+
+      ${3:expect()}
+    });
+    """
+
+  'Creates a mapDispatchToProps const':
+    'prefix': 'mapDispatch'
+    'body': """
+    const mapDispatchToProps = dispatch => ({${1}});
+    """
+
+  'Creates a mapStateToProps const':
+    'prefix': 'mapState'
+    'body': """
+    const mapStateToProps = state => ({${1}});
+    """
+
+  'Creates a mergeProps const':
+    'prefix': 'mergeProps'
+    'body': """
+    const mergeProps = (stateProps, dispatchProps, compProps) => ({
+    ...stateProps, ...dispatchProps, compProps,
+    ${1}
+    });
+    """
